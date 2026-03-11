@@ -1,0 +1,57 @@
+{
+  "coffeeData": [
+    {
+      "coffeeName": "Americanoooorr",
+      "countryOfOrigin": "Georgiaarr",
+      "description": "desccrr",
+      "imageUrl": "https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 222444,
+      "caffeine": 222444,
+      "ingredients": [
+        {
+          "flavor": "Earthy",
+          "strength": "low",
+          "description": "Robusta Beans Description here..",
+          "ingredientName": "Robusta Beans",
+          "price": 5,
+          "id": "4829"
+        },
+        {
+          "id": "e10c",
+          "ingredientName": "Vanilla Syrup old",
+          "description": "23",
+          "strength": "medium",
+          "flavor": "yyyy",
+          "price": 23
+        }
+      ],
+      "id": "562f"
+    }
+  ],
+  "ingredientData": [
+    {
+      "flavor": "Earthy",
+      "strength": "strong",
+      "description": "Description here..d",
+      "ingredientName": "Vanilla Syrupp",
+      "price": 233,
+      "id": "8698"
+    },
+    {
+      "flavor": "Earthy",
+      "strength": "low",
+      "description": "Robusta Beans Description here..",
+      "ingredientName": "Robusta Beans",
+      "price": 5,
+      "id": "4829"
+    },
+    {
+      "id": "e10c",
+      "ingredientName": "Vanilla Syrup old",
+      "description": "23",
+      "strength": "medium",
+      "flavor": "yyyy",
+      "price": 23
+    }
+  ]
+}
