@@ -6,7 +6,11 @@ function CoffeeCard({ coffee, deleteCoffee }) {
     <div className={styles.card}>
       <img src={coffee.imageUrl} alt="coffee" />
       <h3>{coffee.coffeeName}</h3>
-      <p>{coffee.description}</p>
+      <p>
+        {coffee.description.length > 70
+          ? coffee.description.substring(0, 70)
+          : coffee.description}
+      </p>
       <p>
         <strong>Origin:</strong>
         {coffee.countryOfOrigin}
