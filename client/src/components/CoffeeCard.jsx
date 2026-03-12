@@ -1,23 +1,35 @@
 import {
   Card,
   CardButtonWrapperDiv,
+  CardCurrency,
   CardDescription,
   CardImg,
+  CardPrice,
+  CardPriceWrapperDiv,
   CardTextContentDiv,
   CardTitle,
 } from "../styles/CoffeeCard.style";
+import Button from "./Btn";
 
-function CoffeeCard() {
+function CoffeeCard({ coffee }) {
   return (
     <Card>
-      <CardImg
-        src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1037&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Coffee"
-      />
+      <CardImg src={coffee.imageUrl} alt={coffee.coffeeName} />
       <CardTextContentDiv>
-        <CardTitle>Title here</CardTitle>
-        <CardDescription>Card description here..</CardDescription>
-        <CardButtonWrapperDiv></CardButtonWrapperDiv>
+        <CardTitle>{coffee.coffeeName}</CardTitle>
+        <CardDescription>
+          {coffee.description.length > 70
+            ? coffee.description.substring(0, 70)
+            : coffee.description}
+        </CardDescription>
+        <CardPriceWrapperDiv>
+          <CardPrice>${coffee.price.toFixed(2)}</CardPrice>
+          <CardCurrency>USD</CardCurrency>
+        </CardPriceWrapperDiv>
+        <CardButtonWrapperDiv>
+          <Button title="Add to Cart" />
+          <Button title="Details" url={`/${coffee.id}`} />
+        </CardButtonWrapperDiv>
       </CardTextContentDiv>
     </Card>
   );

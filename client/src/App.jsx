@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<AllCoffeePage />} />
-        <Route path="/single-coffee" element={<SingleCoffeePage />} />
+        <Route path="/:id" element={<SingleCoffeePage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
