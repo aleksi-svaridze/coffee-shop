@@ -9,6 +9,8 @@ import {
   TableHeaderCell,
   TableWrapper,
 } from "../styles/Table.style";
+import CartCardActions from "../components/CartCardActions";
+import CurrencySwitcher from "../components/CurrencySwitcher";
 
 function CartPage() {
   const [isInCart] = useState(true);
@@ -17,6 +19,7 @@ function CartPage() {
       <Header title="Your Shopping Cart" />
       {isInCart ? (
         <CartWrapper>
+          <CurrencySwitcher />
           <TableWrapper>
             <TableHeader>
               <TableHeaderCell>Coffee</TableHeaderCell>
@@ -42,6 +45,7 @@ function CartPage() {
               <TableBodyCell>Action</TableBodyCell>
             </TableBody>
           </TableWrapper>
+          <CartCardActions />
         </CartWrapper>
       ) : (
         <CartWrapper>
