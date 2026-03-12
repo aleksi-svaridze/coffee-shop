@@ -1,5 +1,11 @@
+import CoffeeCard from "../components/CoffeeCard";
+
 function AllCoffeePage() {
-  return <div>AllCoffeePage</div>;
+  return (
+    <div>
+      <CoffeeCard />
+    </div>
+  );
 }
 
 export default AllCoffeePage;

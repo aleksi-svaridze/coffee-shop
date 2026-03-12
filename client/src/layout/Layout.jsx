@@ -1,18 +1,18 @@
 import { Link, Outlet } from "react-router-dom";
-import { TemplateLayout } from "../styles/TemplateLayout";
+import { Main, Nav, TemplateLayout } from "../styles/TemplateLayout";
 
-function Navigation() {
+function Layout() {
   return (
     <TemplateLayout>
-      <nav>
+      <Nav>
         <Link to={"/"}>Coffee Menu</Link>
         <Link to={"/cart"}>Cart</Link>
-      </nav>
-      <main>
+      </Nav>
+      <Main>
         <Outlet />
-      </main>
+      </Main>
     </TemplateLayout>
   );
 }
 
-export default Navigation;
+export default Layout;
