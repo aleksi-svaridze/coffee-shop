@@ -21,9 +21,10 @@ export const LogoText = styled.h1`
 `;
 
 export const NavStyledLink = styled(NavLink)`
+  position: relative;
   background-color: white;
   color: #e5b299;
-  padding: 4px 6px;
+  padding: 8px;
   text-decoration: none;
   display: block;
   border-radius: 6px;
@@ -33,7 +34,7 @@ export const NavStyledLink = styled(NavLink)`
     color: white;
   }
   &:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
   }
 
   &.active {

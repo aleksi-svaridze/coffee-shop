@@ -134,5 +134,31 @@
       "flavor": "yyyy",
       "price": 23
     }
+  ],
+  "cartItems": [
+    {
+      "id": "bd1f",
+      "name": "Capuccino",
+      "price": 23,
+      "quantity": 3
+    },
+    {
+      "id": "b02b",
+      "name": "Late",
+      "price": 34,
+      "quantity": 2
+    },
+    {
+      "id": "06a9",
+      "name": "Americanos",
+      "price": 44,
+      "quantity": 2
+    },
+    {
+      "id": "21e3",
+      "name": "coffee",
+      "price": 23,
+      "quantity": 4
+    }
   ]
 }

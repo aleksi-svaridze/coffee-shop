@@ -9,7 +9,6 @@ function AllCoffeePage() {
     fetch("http://localhost:3000/coffeeData")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setCoffees(data);
       })
       .catch((error) => {
