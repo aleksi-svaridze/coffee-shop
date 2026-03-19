@@ -14,7 +14,7 @@ import CurrencySwitcher from "../components/CurrencySwitcher";
 
 function CartPage() {
   const [cartItems, setCartItems] = useState([]);
-  const [isInCart] = useState(true);
+  const [isInCart, setIsInCart] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:3000/cartItems")
@@ -28,10 +28,41 @@ function CartPage() {
       });
   }, []);
 
+  const deleteItemInCart = (id) => {
+    fetch(`http://localhost:3000/cartItems/${id}`, {
+      method: "delete",
+    }).then((res) => {
+      if (res.ok) {
+        setCartItems(cartItems.filter((item) => item.id !== id));
+        console.log("Item in Cart deleted successfully");
+      } else {
+        console.error("Failed to delete item in Cart");
+      }
+    });
+  };
+
+  const deleteAllItemsInCart = async () => {
+    try {
+      const deletePromises = cartItems.map(
+        (item) =>
+          fetch(`http://localhost:3000/cartItems/${item.id}`, {
+            method: "DELETE",
+          }),
+        setIsInCart(false),
+      );
+
+      await Promise.all(deletePromises);
+
+      setCartItems([]);
+    } catch (error) {
+      console.error("Error deleting all data:", error);
+    }
+  };
+
   return (
     <>
       <Header title="Your Shopping Cart" />
-      {isInCart ? (
+      {isInCart && cartItems.length > 0 ? (
         <CartWrapper>
           <CurrencySwitcher />
           <TableWrapper>
@@ -50,12 +81,12 @@ function CartPage() {
                 <TableBodyCell>{quantity}</TableBodyCell>
                 <TableBodyCell>${price * quantity}</TableBodyCell>
                 <TableBodyCell>
-                  <Button title="Remove" />
+                  <Button title="Remove" action={() => deleteItemInCart(id)} />
                 </TableBodyCell>
               </TableBody>
             ))}
           </TableWrapper>
-          <CartCardActions />
+          <CartCardActions action={deleteAllItemsInCart} />
         </CartWrapper>
       ) : (
         <CartWrapper>

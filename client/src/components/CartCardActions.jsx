@@ -5,7 +5,7 @@ import {
 } from "../styles/CartCardActions.styles";
 import Button from "./Btn";
 
-function CartCardActions() {
+function CartCardActions({ action }) {
   return (
     <CartCardActionsWrapper>
       <TotalPrice>
@@ -13,7 +13,7 @@ function CartCardActions() {
       </TotalPrice>
       <ActionButtonsWrapper>
         <Button url={"#"} title={"purchase"} />
-        <Button url={"#"} title={"Clear Cart"} />
+        <Button url={"#"} title={"Clear Cart"} action={action} />
       </ActionButtonsWrapper>
     </CartCardActionsWrapper>
   );
