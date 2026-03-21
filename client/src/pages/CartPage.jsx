@@ -11,6 +11,7 @@ import {
 } from "../styles/Table.style";
 import CartCardActions from "../components/CartCardActions";
 import CurrencySwitcher from "../components/CurrencySwitcher";
+import Popup from "../components/Popup";
 
 function CartPage() {
   const [cartItems, setCartItems] = useState([]);
@@ -61,6 +62,7 @@ function CartPage() {
 
   return (
     <>
+      <Popup />
       <Header title="Your Shopping Cart" />
       {isInCart && cartItems.length > 0 ? (
         <CartWrapper>
