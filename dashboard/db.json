@@ -135,24 +135,5 @@
       "price": 23
     }
   ],
-  "cartItems": [
-    {
-      "id": "3bee",
-      "name": "coffee",
-      "price": 23,
-      "quantity": 2
-    },
-    {
-      "id": "b54f",
-      "name": "Late",
-      "price": 34,
-      "quantity": 1
-    },
-    {
-      "id": "3980",
-      "name": "Capuccino",
-      "price": 23,
-      "quantity": 1
-    }
-  ]
+  "cartItems": []
 }

@@ -11,11 +11,12 @@ import {
 } from "../styles/Table.style";
 import CartCardActions from "../components/CartCardActions";
 import CurrencySwitcher from "../components/CurrencySwitcher";
-import Popup from "../components/Popup";
+import { useCart } from "../context/CartContext";
 
 function CartPage() {
   const [cartItems, setCartItems] = useState([]);
   const [isInCart, setIsInCart] = useState(true);
+  const { fetchCartCount } = useCart();
 
   useEffect(() => {
     fetch("http://localhost:3000/cartItems")
@@ -36,6 +37,7 @@ function CartPage() {
       if (res.ok) {
         setCartItems(cartItems.filter((item) => item.id !== id));
         console.log("Item in Cart deleted successfully");
+        fetchCartCount();
       } else {
         console.error("Failed to delete item in Cart");
       }
@@ -54,7 +56,7 @@ function CartPage() {
 
       await Promise.all(deletePromises);
 
-      setCartItems([]);
+      (setCartItems([]), fetchCartCount());
     } catch (error) {
       console.error("Error deleting all data:", error);
     }
@@ -62,7 +64,6 @@ function CartPage() {
 
   return (
     <>
-      <Popup />
       <Header title="Your Shopping Cart" />
       {isInCart && cartItems.length > 0 ? (
         <CartWrapper>

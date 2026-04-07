@@ -7,7 +7,7 @@ export const PopupDiv = styled.div`
   background-color: green;
   border-radius: 10px;
   color: white;
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
   z-index: 1000;

@@ -5,6 +5,7 @@ import Header from "../components/Header";
 
 function AllCoffeePage() {
   const [coffees, setCoffees] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:3000/coffeeData")
       .then((response) => response.json())

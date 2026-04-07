@@ -5,17 +5,20 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 import { Routes, Route } from "react-router-dom";
 import Layout from "./layout/Layout";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<AllCoffeePage />} />
-        <Route path="/:id" element={<SingleCoffeePage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Route>
-    </Routes>
+    <CartProvider>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<AllCoffeePage />} />
+          <Route path="/:id" element={<SingleCoffeePage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </CartProvider>
   );
 }
 
