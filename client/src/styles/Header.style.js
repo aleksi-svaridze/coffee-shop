@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const HeaderWrapper = styled.header`
   width: 100%;
   padding: 16px;
-  background-color: #6f4e37;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,7 +10,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const HeaderTitle = styled.h1`
-  color: white;
-  font-size: 24px;
+  color: #6f4e37;
+  font-size: 28px;
   font-weight: bold;
 `;

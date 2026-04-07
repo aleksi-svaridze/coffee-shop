@@ -107,6 +107,33 @@
           "id": "4829"
         }
       ]
+    },
+    {
+      "id": "cfd4",
+      "coffeeName": "Azerbaijan coffee",
+      "countryOfOrigin": "Arctica",
+      "description": "hhh",
+      "imageUrl": "https://unsplash.com/photos/flat-lay-photography-of-coffee-latte-ground-coffee-and-coffee-beans-Y3AqmbmtLQI",
+      "price": 34,
+      "caffeine": 45,
+      "ingredients": [
+        {
+          "flavor": "Earthy",
+          "strength": "strong",
+          "description": "Description here..d",
+          "ingredientName": "Vanilla Syrupp",
+          "price": 233,
+          "id": "8698"
+        },
+        {
+          "id": "e10c",
+          "ingredientName": "Vanilla Syrup old",
+          "description": "23",
+          "strength": "medium",
+          "flavor": "yyyy",
+          "price": 23
+        }
+      ]
     }
   ],
   "ingredientData": [
@@ -135,5 +162,12 @@
       "price": 23
     }
   ],
-  "cartItems": []
+  "cartItems": [
+    {
+      "id": "d5dc",
+      "name": "Capuccino",
+      "price": 23,
+      "quantity": 1
+    }
+  ]
 }

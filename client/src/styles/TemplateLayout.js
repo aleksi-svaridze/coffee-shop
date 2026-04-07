@@ -8,6 +8,8 @@ export const TemplateLayout = styled.div`
 `;
 
 export const Nav = styled.nav`
+  position: fixed;
+  height: 100vh;
   width: 250px;
   background-color: white;
   padding: 16px;
@@ -46,5 +48,7 @@ export const NavStyledLink = styled(NavLink)`
 export const Main = styled.main`
   background-color: #f6f4f1;
   padding: 24px 24px 48px 24px;
-  width: calc(100% - 250px);
+  margin-left: 250px;
+  min-height: 100vh;
+  width: 100%;
 `;
